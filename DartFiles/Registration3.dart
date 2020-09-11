@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'RoundTextfields.dart';
+import 'GenderComboBox.dart';
 import 'package:LR/LogRButton.dart';
-import 'Reg3TextFields.dart';
+import 'DOBTextField.dart';
 import 'Heading.dart';
 
 void main() {
@@ -76,25 +76,25 @@ class _State extends State<Registration3> {
                   children: [
                     SizedBox(
                       height: screenInfo.size.height * (53/823),
-                      width: screenInfo.size.width * (58/411),
+                      width: screenInfo.size.width * (64/411),
                     ),
                     SizedBox(
                       height: screenInfo.size.height * (53/823),
-                      width: screenInfo.size.width * (296/411),
+                      width: screenInfo.size.width * (284/411),
                       child: Container(
-                        child: Reg3TextField("Gender", GenderController,'Gender'),
+                        child:  ChooseGender(),
                       ),
                     ),
                     SizedBox(
                       height: screenInfo.size.height * (53/823),
-                      width: screenInfo.size.width * (57/411),
+                      width: screenInfo.size.width * (63/411),
                     ),
                   ],
                 ),
                 Row(
                   children: [
                     SizedBox(
-                      height: screenInfo.size.height * (27/823),
+                      height: screenInfo.size.height * (21/823),
                     ),
                   ],
                 ),
