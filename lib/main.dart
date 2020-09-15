@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:home_page_1/slider.dart' as slider;
 import 'search_bar.dart' as searchBar;
 
 void main() {
@@ -18,30 +17,13 @@ class HomePageSectionArea extends State<HomePageSection> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            locationAndSearchbar(),
-            slider.Slider(),
-          ],
+        resizeToAvoidBottomInset: false,
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: searchBar.SearchBarWidget(),
         ),
       ),
     );
   }
-}
-
-Widget locationAndSearchbar() {
-  return Container(
-      height: 50,
-      child: Row(
-        children: <Widget>[
-          locationConfigure(),
-          // searchBar.SearchBarWidget()
-        ],
-      ));
-}
-
-Widget locationConfigure() {
-  return Container(
-    child: new Icon(Icons.location_on),
-  );
 }
